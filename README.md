@@ -1,3 +1,4 @@
 # ThreeJS_FINAL
- CMPM FINAL PROJECT
+ CMPM FINAL PROJECT:
+ 
 Makkenzie Zepeda, 
