@@ -1,4 +1,4 @@
 # ThreeJS_FINAL
  CMPM FINAL PROJECT:
  
-Makkenzie Zepeda, 
+Makkenzie Zepeda, Juliet Gammell,  Gabriel Gallegos, Ian Ellis.
