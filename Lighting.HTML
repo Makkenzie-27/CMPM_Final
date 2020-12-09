@@ -4,6 +4,8 @@
 		<title>lights</title>
 	</head>
 	<body>
+
+//import * as THREE from 
 		
 let wireframe = false;
 let scene, camera, renderer, duck;
@@ -19,24 +21,42 @@ function init() {
 		
 //enabling the shadows in renderer 
   renderer.shadowMap.enabled = true;
-  renderer.shadowMap.type = THREEE.PCFSoft
+  renderer.shadowMap.type = THREEE.PCFSoftShadowMap;
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  const canvas = renderer.domElement;
+  document.body.appendChild(canvas);
 
-  
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
-const controls = new OrbitControls(camera, renderer.domElement);
-const geometry1 = new THREE.BoxGeometry();
-const material1 = new THREE.MeshPhongMaterial();
-
-//Adding mesh to Duck
-const duck = new THREE.Mesh(geometry1, material1);
-scene.add(duck);
 		
-//Wireframe
-if (wireframe) {
-      material1.wireframe = true;
-      
-    }
+  const controls = new OrbitControls(camera, canvas);
+		
+  duck = [];
+		
+		
+  const THREE.BoxGeometry(0.5, 0.5, 0.5);
+  const material1 = new THREE.MeshPhongMaterial({ color: 0Xff000})
+
+//Adding mesh to Duck 
+  mesh.position.x = -1 + Math.random() * 10;
+  mesh.position.y = 1v + Math.random() * 3;
+  mesh.position.z = -5 + Math.random() * 10;
+		
+  mesh.recieveShadow = false;
+  mesh.castShadow = true;
+  scene.add(mesh);
+		
+  duck.push(mesh);
+ 
+
+  meshFloor = new THREE.Mesh(
+   new THREE.PlaneGeometry(20, 20, 20, 20)
+   new THREE.MeshPhongMaterial({ color: 0Xffffff, side: THREE.DoubleSide });
+		
+  meshFloor.rotation.x -= Math.PI / 1.8;
+  meshFloor.recieverShadow = true;
+  scene.add(meshFloor);
+		
+
+      }
 		
 //Spotlight: soft yellow 
 
